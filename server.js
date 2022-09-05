@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     // writer.write('Date & Time: '+date);
     res.send("hello world")
 });git
-var server = app.listen(8085, () => {
+var server = app.listen(process.env.PORT || 8085, () => {
     var port = server.address().port;
     console.log('listening on port '+port)
 });
